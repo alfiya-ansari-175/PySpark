@@ -85,4 +85,3 @@ This project focuses on customer segmentation using the Bank Churners dataset. I
 
 **Alfiya Ansari**  
 Master’s in Web and Data Science – University of Koblenz  
-GitHub: [your-username](https://github.com/your-username)
