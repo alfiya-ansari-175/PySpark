@@ -22,21 +22,6 @@ This project focuses on customer segmentation using the Bank Churners dataset. I
 - PySpark MLlib (Clustering, Feature Engineering)
 - Google Colab / Jupyter Notebook
 
-## 📦 Setup Instructions
-
-1. Clone the repo:
-   ```bash
-   git clone https://github.com/your-username/customer-segmentation-pyspark.git
-   cd customer-segmentation-pyspark
-   ```
-
-2. Install PySpark:
-   ```bash
-   pip install pyspark
-   ```
-
-3. Run the notebook using Jupyter or Google Colab.
-
 ## 🔄 Workflow Summary
 
 1. **Data Loading & Cleaning**
@@ -85,4 +70,3 @@ This project focuses on customer segmentation using the Bank Churners dataset. I
 
 **Alfiya Ansari**  
 Master’s in Web and Data Science – University of Koblenz  
-GitHub: [your-username](https://github.com/your-username)
