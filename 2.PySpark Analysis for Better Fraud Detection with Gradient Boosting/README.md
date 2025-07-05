@@ -23,13 +23,13 @@ Performed scalable fraud detection using PySpark for data preprocessing and feat
 ## 🔄 Workflow Summary
 
 1. **Data Loading & Preprocessing**
-   - Loaded the dataset using 'SparkSession'
+   - Loaded the dataset using SparkSession
    - Dropped unnecessary columns
-   - Converted categorical variables using 'StringIndexer' and 'OneHotEncoder'
+   - Converted categorical variables using StringIndexer and OneHotEncoder
    - Created a pipeline for transformation
 
 2. **Feature Vectorization**
-   - Combined all features into a single vector using 'VectorAssembler'
+   - Combined all features into a single vector using VectorAssembler
    - Performed employee attrition analysis using PySpark for scalable preprocessing and modeling, with Pandas and Seaborn for visual evaluation and interpretation.
 
 3. **Model Building**
@@ -38,7 +38,7 @@ Performed scalable fraud detection using PySpark for data preprocessing and feat
    - Evaluated with metrics such as accuracy and ROC
      
 4. **Model Evaluation**
-   - Checked model predictions using 'MulticlassClassificationEvaluator' and BinaryclassClassificationEvaluator
+   - Checked model predictions using MulticlassClassificationEvaluator and BinaryclassClassificationEvaluator
    - Generated a confusion matrix and calculated accuracy
 
 ## 📈 Key Insights
@@ -57,4 +57,3 @@ Performed scalable fraud detection using PySpark for data preprocessing and feat
 
 **Alfiya Ansari**  
 Master’s in Web and Data Science – University of Koblenz
- 
