@@ -1,72 +1,60 @@
 
-# 📊 Customer Segmentation using Bank Dataset (PySpark Project)
+# 📊 PySpark Analysis for Better Fraud Detection with Gradient Boosting
 
-This project focuses on customer segmentation using the Bank Churners dataset. It uses PySpark for scalable data processing, feature engineering, and clustering (KMeans) to understand customer behavior and predict churn.
+Performed scalable fraud detection using PySpark for data preprocessing and feature engineering, and applied Gradient Boosting for classification, with Pandas and Seaborn for model evaluation and visualization.
 
 ## 📁 Dataset
 
-- **Source:** [Bank Churners dataset](https://www.kaggle.com/datasets/sakshigoyal7/credit-card-customers)
+- **Source:** Dataset attached.
 - **Format:** CSV
-- **Key Columns:** Customer_Age, Total_Trans_Ct, Total_Trans_Amt, Attrition_Flag, etc.
+  
+## 🚀 Project Objectives
 
-## 🚀 Project Goals
-
-- Preprocess and clean the dataset using PySpark.
-- Perform RFM (Recency, Frequency, Monetary) analysis.
-- Use KMeans clustering to group similar customers.
-- Interpret clusters with respect to churn.
+- Perform data preprocessing and feature encoding using PySpark
+- Build a classification model to predict employee attrition
+- Evaluate model performance with evaluation metrices such as accuracy,precision,recall and more.
 
 ## 🛠️ Technologies Used
 
 - Apache Spark (PySpark)
-- PySpark MLlib (Clustering, Feature Engineering)
-- Google Colab / Jupyter Notebook
+- PySpark MLlib (Classification, Feature Engineering, Pipelines)
+- Jupyter Notebook / Google Colab
 
 ## 🔄 Workflow Summary
 
-1. **Data Loading & Cleaning**
-   - Read dataset using `SparkSession`
-   - Dropped irrelevant classifier columns
-   - Created a new binary column `churn` (1 for churned, 0 for existing customers)
+1. **Data Loading & Preprocessing**
+   - Loaded the dataset using 'SparkSession'
+   - Dropped unnecessary columns
+   - Converted categorical variables using 'StringIndexer' and 'OneHotEncoder'
+   - Created a pipeline for transformation
 
-2. **RFM Feature Engineering**
-   - Discretized:
-     - `Months_on_book` (Recency)
-     - `Total_Trans_Ct` (Frequency)
-     - `Total_Trans_Amt` (Monetary)
-   - Used `QuantileDiscretizer` to split each into 5 bins
+2. **Feature Vectorization**
+   - Combined all features into a single vector using 'VectorAssembler'
+   - Performed employee attrition analysis using PySpark for scalable preprocessing and modeling, with Pandas and Seaborn for visual evaluation and interpretation.
 
-3. **Feature Vectorization**
-   - Used `VectorAssembler` and `StandardScaler` for clustering
+3. **Model Building**
+   - Split data into training and test sets
+   - Trained a **Logistic Regression** model to classify employee attrition
+   - Evaluated with metrics such as accuracy and ROC
+     
+4. **Model Evaluation**
+   - Checked model predictions using 'MulticlassClassificationEvaluator' and BinaryclassClassificationEvaluator
+   - Generated a confusion matrix and calculated accuracy
 
-4. **KMeans Clustering**
-   - Ran KMeans for `k=2` to `k=10`
-   - Selected the best `k` based on **Silhouette Score**
-   - Clustered the data and evaluated churn distribution
+## 📈 Key Insights
 
-## 📈 Main Insights
-
-- **Churn Feature Creation:** Attrited customers were successfully encoded as 1, helping in later segmentation.
-
-- **RFM Segmentation:** Customers were divided based on:
-  - Time with the bank (`Months_on_book`)
-  - Transaction count (`Total_Trans_Ct`)
-  - Total transaction amount (`Total_Trans_Amt`)
-
-- **Best K in Clustering:** The optimal number of clusters (`k`) was selected using **Silhouette Score**, achieving the highest cohesion and separation for the chosen `k`.
-
-- **Cluster-Level Churn Analysis:**
-  - Some clusters had significantly higher churn than others.
-  - High transaction frequency and value were associated with **lower churn**.
-  - Clusters with low engagement (low frequency/value) showed **high churn**, which can help in targeting retention efforts.
+- Feature engineering with PySpark pipelines simplifies large-scale processing
+- Logistic Regression provides a baseline for attrition classification
+- Accuracy and confusion matrix help assess prediction performance effectively
 
 ## 📌 Future Improvements
 
-- Add visualizations using matplotlib or seaborn (via `.toPandas()`).
-- Implement additional clustering methods (e.g., DBSCAN).
-- Use advanced models for churn prediction (e.g., logistic regression, random forest).
+- Explore more models: Random Forest, Gradient Boosted Trees
+- Include feature importance ranking
+- Add visualizations after converting Spark DataFrames to Pandas
 
 ## 👤 Author
 
 **Alfiya Ansari**  
-Master’s in Web and Data Science – University of Koblenz  
+Master’s in Web and Data Science – University of Koblenz
+ 
